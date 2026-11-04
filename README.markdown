@@ -20,6 +20,12 @@
 
 Assuming you already installed [MeCab](http://taku910.github.io/mecab/).
 
+On macOS, you can install MeCab via Homebrew:
+```bash
+brew install mecab
+```
+
+Then load cl-mecab:
 ``` lisp
 (ql:quickload :cl-mecab)
 ```

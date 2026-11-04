@@ -19,7 +19,9 @@
 
 
 (define-foreign-library libmecab
-    (:darwin "libmecab.dylib")
+    (:darwin (:or "/opt/homebrew/lib/libmecab.dylib"  ; Homebrew on Apple Silicon (ARM)
+                  "/usr/local/lib/libmecab.dylib"      ; Homebrew on Intel Mac
+                  "libmecab.dylib"))                   ; System default paths
     (:unix "libmecab.so")
     (:windows "libmecab.dll"))
 
